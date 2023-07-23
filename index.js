@@ -40,9 +40,9 @@ terminal.on("line", async (l) => {
     if (command == "folder") {
       if (!args[0]) return log("Debes insertar la ruta de la carpeta de repeticiones principal como argumento.");
 
-      replays_path = args[0];
+      replays_path = args(" ");
 
-      return log("Carpeta de repticiones principal establecida.");
+      return log("Carpeta de repeticiones principal establecida.");
     }
 
     if (command == "recipient") {
