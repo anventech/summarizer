@@ -71,6 +71,7 @@ terminal.on("line", async (l) => {
       const summary_path = path.join(recipient_path, `Resumen - ${recipient_name}.mp4`);
 
       video_stitch.concat({
+        ffmpeg_path: "ffmpeg.exe",
         silent: true,
         overwrite : true
       }).clips(mapped).output(`"${summary_path}"`).concat().then(() => {
